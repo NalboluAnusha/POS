@@ -1,0 +1,12 @@
+@SpringBootApplication
+public class PosAppApplication extends SpringBootServletInitializer {
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(PosAppApplication.class);
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(PosAppApplication.class, args);
+    }
+}
