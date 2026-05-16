@@ -126,7 +126,17 @@
                 <version>3.10.0.2594</version>
 
             </plugin>
+stage('Deploy to Tomcat Server') {
+    sh """
+    scp target/*.war ec2-user@172.31.9.72:/tmp/
 
+    ssh ec2-user@172.31.9.72 '
+        sudo cp /tmp/*.war /opt/tomcat/webapps/pos.war &&
+        sudo /opt/tomcat/bin/shutdown.sh &&
+        sudo /opt/tomcat/bin/startup.sh
+    '
+    """
+}
         </plugins>
 
     </build>
