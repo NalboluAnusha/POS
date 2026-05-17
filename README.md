@@ -9,10 +9,13 @@
     <!-- Project Details -->
     <!-- ====================================== -->
 
-    <groupId>com.pos</groupId>
-    <artifactId>pos-app</artifactId>
-    <version>1.0</version>
-    <packaging>war</packaging>
+    <groupId>org.springframework.samples</groupId>
+<artifactId>spring-petclinic</artifactId>
+<version>4.0.0-SNAPSHOT</version>
+
+<packaging>war</packaging>
+
+<name>petclinic</name>
 
     <name>PointOfSaleApplication</name>
 
@@ -43,6 +46,7 @@
     <artifactId>spring-boot-starter-tomcat</artifactId>
     <scope>provided</scope>
 </dependency>
+
 
         <dependency>
             <groupId>jakarta.servlet</groupId>
